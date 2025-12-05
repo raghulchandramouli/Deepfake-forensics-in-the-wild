@@ -27,3 +27,5 @@ def dwt_fingerprint(img):
     
     # Stack into 4-channel array
     fingerprint = np.stack([LL, LH, HL, HH], axis=-1)
+    
+    return fingerprint
