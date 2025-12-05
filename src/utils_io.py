@@ -15,7 +15,7 @@ def list_images(folder):
     Returns a list of abs path
     """
     
-    exts = (".jpg", ".jpeg", ".png")
+    exts = (".jpg", ".jpeg", ".png", ".webp")
     files = []
     
     for f in os.listdir(folder):
@@ -23,3 +23,10 @@ def list_images(folder):
             files.append(os.path.join(folder, f))
             
     return files
+
+def ensure_dir(path):
+    """
+    Ensures that a directory exists; creates it if valid.
+    """
+    if not os.path.exists(path):
+        os.makedirs(path)
